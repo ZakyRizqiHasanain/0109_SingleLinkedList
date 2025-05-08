@@ -17,5 +17,22 @@ class list{
         start = NULL;
     }
     
+    void addnode()
+    {
+        int nim;
+        cout << "\nMasukkan Nomor Mahasiswa: ";
+        cin >> nim;
+        node *nodebaru = new node;
+        nodebaru->noMhs = nim;
     
+        if (start == NULL || nim <= start->noMhs){
+            if ((start != NULL) && (nim == start->noMhs)){
+                cout << "\nDuplikasi noMhs tidak diijinkan\n";
+                return;
+            }
+            nodebaru->next = start;
+            start = nodebaru;
+            return;
+        }
+    }
     };
