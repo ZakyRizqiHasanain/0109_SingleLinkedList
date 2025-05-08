@@ -34,5 +34,9 @@ class list{
             start = nodebaru;
             return;
         }
+
+        node *previous = start;
+        node *current = start;
+
     }
     };
